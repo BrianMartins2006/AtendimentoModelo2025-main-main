@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Último Atendimento</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 300px;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: #222;
+    }
+
+    #ultimoAtendimento {
+      font-size: 20px;
+      color: green;
+    }
+  </style>
+  <!-- Caminho corrigido -->
+  <script src="controllers/painelController.js" defer></script>
+  <script src="controllers/filaController.js" defer></script>
+  
+</head>
+<body>
+  <div class="card">
+    <h1>Último Atendimento</h1>
+    <div id="ultimoAtendimento">Aguardando...</div>
+  </div>
+</body>
+</html>
