@@ -1,44 +1,44 @@
-# 📋 Fila de Atendimento em JavaScript
+# Sistema de Controle de Fila de Atendimento
 
-Este projeto implementa uma estrutura de **fila (Queue)** em JavaScript utilizando programação orientada a objetos. A fila é uma estrutura de dados do tipo **FIFO** (*First In, First Out*), onde o primeiro elemento inserido é o primeiro a ser removido.
+Este projeto implementa um **sistema de gerenciamento de fila circular de atendimentos**. Ele permite adicionar, remover e buscar pessoas na fila, registrar o tempo de espera e exibir informações sobre o último atendimento.
 
-## 📌 Descrição
+## 📌 Funcionalidades
 
-A classe `Fila` permite simular uma fila de atendimento com um tamanho fixo, controlando os elementos inseridos e removidos de maneira sequencial. Os métodos implementados possibilitam realizar operações comuns em filas, como inserir, remover e verificar elementos.
+- **Adicionar um atendimento**: Insere um novo atendimento na fila com nome e CPF.
+- **Visualizar a fila**: Exibe os elementos presentes na fila em tempo real.
+- **Remover atendimento**: Atende a primeira pessoa da fila e registra seu tempo de espera.
+- **Buscar atendimento por CPF**: Permite localizar uma pessoa específica dentro da fila.
+- **Registro do último atendimento**: Mostra quem foi atendido por último e salva os dados no `localStorage`.
+- **Painel de Atendimento**: Interface separada que exibe o último atendimento atualizado automaticamente.
 
-## 🔧 Funcionalidades
+## 🏗 Estrutura do Código
 
-- **Criação da fila com tamanho fixo**: define o número máximo de elementos que a fila pode armazenar.
-- **Inserção de elementos (enqueue)**: adiciona um novo item no final da fila, se houver espaço disponível.
-- **Remoção de elementos (dequeue)**: remove o item do início da fila, liberando espaço para novos elementos.
-- **Verificação de fila cheia**: identifica se o limite de armazenamento foi atingido.
-- **Verificação de fila vazia**: identifica se não há elementos na fila.
-- **Visualização do primeiro elemento**: retorna o item que está no início da fila, sem removê-lo.
-- **Exibição da fila como string**: permite visualizar todos os elementos presentes na fila em ordem.
+O projeto é organizado da seguinte maneira:
 
-## 🚀 Como Usar
+1. **Classes principais**
+   - `Atendimento`: Define um atendimento, armazenando nome, CPF, data e hora de chegada.
+   - `FilaCircular`: Implementa a fila circular e suas operações (`enqueue`, `dequeue`, `isFull`, `isEmpty`).
+   
+2. **Controllers**
+   - `filaController.js`: Gerencia a adição, remoção e busca de elementos na fila.
+   - `painelController.js`: Atualiza dinamicamente o painel do último atendimento.
 
-Para utilizar a fila, basta instanciar a classe com o tamanho desejado e utilizar os métodos disponíveis para gerenciar os elementos.
+3. **Interfaces**
+   - `index.html`: Página principal do sistema de controle de fila.
+   - `painel.html`: Interface do painel de atendimento, exibindo o último atendido.
 
-## 💡 Aplicações
+## 🛠 Tecnologias Utilizadas
 
-Esta estrutura pode ser utilizada em diversos contextos, como:
-- Simulação de filas de atendimento (bancos, hospitais, etc.)
-- Sistemas de impressão
-- Controle de tarefas em ordem de chegada
-- Buffers de dados
+O projeto foi desenvolvido utilizando:
+- **JavaScript ES6+**
+- **HTML** e **CSS**
+- **LocalStorage** para armazenamento temporário
 
-## 📚 Conceitos Envolvidos
+## 🔧 Como Executar
 
-- Estrutura de Dados: Fila (Queue)
-- Programação Orientada a Objetos (POO)
-- Controle de fluxo e manipulação de arrays
-- Lógica de controle de índices (`início`, `fim` e quantidade de elementos)
+1. Abra `index.html` no navegador para acessar o sistema de controle de fila.
+2. Insira o nome e CPF e clique em **Adicionar à fila**.
+3. Use as opções de **Atender** para remover o primeiro elemento ou **Buscar** para localizar uma pessoa.
+4. O **Painel de Atendimento** (`painel.html`) abre automaticamente para exibir o último atendimento atualizado.
 
-## 👨‍🏫 Objetivo Educacional
 
-Este projeto tem como finalidade o ensino de estruturas de dados básicas com foco em aplicação prática por meio de linguagem de programação moderna e amplamente utilizada.
-
-## 🧑‍💻 Autor
-
-Projeto desenvolvido para fins didáticos no IFSULDEMINAS - Campus Machado.

@@ -50,7 +50,7 @@ function atenderFila() {
       mostrarFila(); // Atualiza a lista exibida
 
       localStorage.setItem('ultimoAtendido', atendido.nome); // Salva localmente o último atendido
-      
+
    } else {
       alert("Fila vazia!");
       localStorage.setItem('ultimoAtendido', "Aguardando...");
